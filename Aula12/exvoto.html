@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do Voto</title>
+
+    <style>
+        body{
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+        h1{
+            padding-top: 50px;
+            color: rgb(255, 0, 0);
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1><strong>Situação do seu voto</strong></h1>
+    Digite a sua idade: <input type = "number" name = "txtidade" id = "txtidade">
+    <input type = "button" value = "Verificar" onclick="verif()"> 
+    <div id ="res">
+
+    </div>
+</body>
+
+<script>
+    function verif(){
+    var idade = document.getElementById("txtidade")
+    var resultado = document.getElementById("res")
+    var resfinal = Number(idade.value)
+
+    res.innerHTML = (`<p>Você tem <strong>${resfinal}</strong> anos de idade! Logo a sua situação está como: `)
+        if(resfinal < 16){
+            res.innerHTML += ('<p>Não vota!</p>')
+        } else if (resfinal < 18 || resfinal > 65){
+            res.innerHTML += ('<p>Voto opcional, mas faça a sua parte!</p>')
+        } else {
+            res.innerHTML += ('<p>Voto obrigatório!</p>')
+        }
+    }    
+</script>
+
+</html>

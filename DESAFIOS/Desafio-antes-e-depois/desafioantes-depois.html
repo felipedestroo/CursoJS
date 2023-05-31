@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Antes e Depois</title>
+    <style>
+        body{
+            background-color: rgb(114, 114, 114);
+        }
+
+
+        h1{
+            font: Normal 50pt Arial;
+            color: rgb(253, 151, 17);
+        }
+        
+        input{
+            font: Normal 20pt Arial;
+            width: 300px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1><strong>Antes e Depois</strong></h1>
+    <input type="button" value="Antecessor e Sucessor" onclick="clicou()">
+</body>
+
+    <script>
+        function clicou(){
+            var n1 = Number.parseInt(window.prompt('Digite um número inteiro qualquer'))
+            window.alert('Antes de '+ n1 + ', temos o número ' + n1-- + '. \n' + 'E depois de ' + n1 + ' temos o número ' + n1++)
+
+
+        }
+
+
+    </script>
+
+
+</html>
